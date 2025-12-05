@@ -21,9 +21,19 @@ jobs:
         with:
           dotnet-version: 10.x
 
-      - name: Test
-        run: dotnet test -c Release
-        working-directory: src
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 22.x
+          cache: npm
 
-      - name: Build & Pack
-        run: dotnet pack src/Lexicon/Lexicon.csproj -c Release
+      - name: Install dependencies
+        run: npm install
+        working-directory: src/Lexicon/Client
+
+      - name: Build client project
+        run: npm run build
+        working-directory: src/Lexicon/Client
+
+      - name: Build server project
+        run: dotnet build src/Lexicon/Lexicon.csproj -c Release
