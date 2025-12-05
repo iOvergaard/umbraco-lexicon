@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lexicon.TestSite", "Lexicon
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lexicon", "Lexicon\Lexicon.csproj", "{AE9E0C1F-4BDC-4DFF-A4A8-98808245D7DA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lexicon.UnitTest", "Lexicon.UnitTest\Lexicon.UnitTest.csproj", "{6C231149-EBAD-455F-A31D-229E2F089930}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,18 @@ Global
 		{AE9E0C1F-4BDC-4DFF-A4A8-98808245D7DA}.Release|x64.Build.0 = Release|Any CPU
 		{AE9E0C1F-4BDC-4DFF-A4A8-98808245D7DA}.Release|x86.ActiveCfg = Release|Any CPU
 		{AE9E0C1F-4BDC-4DFF-A4A8-98808245D7DA}.Release|x86.Build.0 = Release|Any CPU
+		{6C231149-EBAD-455F-A31D-229E2F089930}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C231149-EBAD-455F-A31D-229E2F089930}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C231149-EBAD-455F-A31D-229E2F089930}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{6C231149-EBAD-455F-A31D-229E2F089930}.Debug|x64.Build.0 = Debug|Any CPU
+		{6C231149-EBAD-455F-A31D-229E2F089930}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{6C231149-EBAD-455F-A31D-229E2F089930}.Debug|x86.Build.0 = Debug|Any CPU
+		{6C231149-EBAD-455F-A31D-229E2F089930}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C231149-EBAD-455F-A31D-229E2F089930}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C231149-EBAD-455F-A31D-229E2F089930}.Release|x64.ActiveCfg = Release|Any CPU
+		{6C231149-EBAD-455F-A31D-229E2F089930}.Release|x64.Build.0 = Release|Any CPU
+		{6C231149-EBAD-455F-A31D-229E2F089930}.Release|x86.ActiveCfg = Release|Any CPU
+		{6C231149-EBAD-455F-A31D-229E2F089930}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
