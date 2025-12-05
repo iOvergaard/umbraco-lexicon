@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <PackageReference Include="Umbraco.Cms" Version="17.0.0" />
+    <PackageReference Include="uSync" Version="17.0.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -21,20 +22,9 @@
     <ProjectReference Include="..\Lexicon\Lexicon.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Content Include="App_Plugins\Test\test.js" />
-    <Content Include="App_Plugins\Test\umbraco-package.json" />
-  </ItemGroup>
-
   <PropertyGroup>
     <!-- Razor files are needed for the backoffice to work correctly -->
     <CopyRazorGenerateFilesToPublishDirectory>true</CopyRazorGenerateFilesToPublishDirectory>
-  </PropertyGroup>
-
-  <PropertyGroup>
-    <!-- Remove RazorCompileOnBuild and RazorCompileOnPublish when not using ModelsMode InMemoryAuto -->
-    <RazorCompileOnBuild>false</RazorCompileOnBuild>
-    <RazorCompileOnPublish>false</RazorCompileOnPublish>
   </PropertyGroup>
 
 </Project>
