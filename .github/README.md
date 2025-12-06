@@ -1,5 +1,9 @@
 # Lexicon for Umbraco
 
+<p align="center">
+  <img src="../docs/images/logo.svg" alt="Lexicon Logo" width="128" height="128">
+</p>
+
 [![Downloads](https://img.shields.io/nuget/dt/Umbraco.Community.Lexicon?color=cc9900)](https://www.nuget.org/packages/Umbraco.Community.Lexicon/)
 [![NuGet](https://img.shields.io/nuget/vpre/Umbraco.Community.Lexicon?color=0273B3)](https://www.nuget.org/packages/Umbraco.Community.Lexicon)
 [![GitHub license](https://img.shields.io/github/license/iOvergaard/umbraco-lexicon?color=8AB803)](../LICENSE)

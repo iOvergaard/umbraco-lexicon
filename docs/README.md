@@ -1,5 +1,9 @@
 # Lexicon Documentation
 
+<p align="center">
+  <img src="images/logo.svg" alt="Lexicon Logo" width="128" height="128">
+</p>
+
 Lexicon enables dictionary-based Umbraco BackOffice localization in Umbraco 14+.
 
 ## Requirements
