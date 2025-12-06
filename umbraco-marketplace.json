@@ -8,7 +8,7 @@
   },
   "Category": "Translations",
   "AlternateCategory": "Editor Tools",
-  "Description": "Lexicon restores dictionary-based backoffice localization for Umbraco 14+. Use dictionary items to translate document type labels, descriptions, tab names, and group names in the backoffice.",
+  "Description": "Lexicon restores dictionary-based BackOffice localization for Umbraco 14+. Use dictionary items to translate document type labels, descriptions, tab names, and group names in the BackOffice.",
   "DocumentationUrl": "https://github.com/iOvergaard/umbraco-lexicon/tree/main/docs",
   "LicenseTypes": [
     "Free"
