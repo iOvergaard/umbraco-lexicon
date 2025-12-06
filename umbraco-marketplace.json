@@ -6,8 +6,9 @@
     "Url": "https://snebold.dk",
     "Description": "Jacob works for Umbraco HQ on the CMS team. He is a developer and loves to work with JavaScript and Umbraco. He is also a big fan of the Umbraco community and loves to contribute to the community in any way he can."
   },
-  "Category": "Developer Tools",
-  "Description": "Low/no-code solution to access server variables with JavaScript in Umbraco.",
+  "Category": "Translations",
+  "AlternateCategory": "Editor Tools",
+  "Description": "Lexicon restores dictionary-based backoffice localization for Umbraco 14+. Use dictionary items to translate document type labels, descriptions, tab names, and group names in the backoffice.",
   "DocumentationUrl": "https://github.com/iOvergaard/umbraco-lexicon/tree/main/docs",
   "LicenseTypes": [
     "Free"
@@ -21,8 +22,23 @@
   "Tags": [
     "dictionary",
     "localization",
-    "backoffice"
+    "backoffice",
+    "translation",
+    "multilingual"
   ],
   "Title": "Lexicon",
-  "Screenshots": []
+  "Screenshots": [
+    {
+      "Caption": "Create dictionary items with Area_Key format",
+      "ImageUrl": "https://raw.githubusercontent.com/iOvergaard/umbraco-lexicon/main/docs/images/translation.png"
+    },
+    {
+      "Caption": "Reference dictionary keys in document type labels",
+      "ImageUrl": "https://raw.githubusercontent.com/iOvergaard/umbraco-lexicon/main/docs/images/documenttype.png"
+    },
+    {
+      "Caption": "Editors see translated values in the content editor",
+      "ImageUrl": "https://raw.githubusercontent.com/iOvergaard/umbraco-lexicon/main/docs/images/document.png"
+    }
+  ]
 }
