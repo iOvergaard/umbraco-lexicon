@@ -95,7 +95,7 @@ After migration:
 | Feature | Umbraco 13 | Lexicon |
 |---------|------------|---------|
 | Simple key syntax (`#Key`) | Yes | No |
-| Area-based keys (`#Area_Key`) | No | Yes |
+| Area-based keys (`#Area_Key`) | Yes | Yes |
 | Property labels | Yes | Yes |
 | Property descriptions | Yes | Yes (UFM syntax) |
 | Tab names | Yes | Yes |
@@ -104,7 +104,7 @@ After migration:
 
 \* Inline translation like "Click {#Form_Here} to submit" works in description fields that support UFM.
 
-\** Lexicon loads dictionary values at application startup. Changes require a restart.
+\** Lexicon loads dictionary values once per session. Changes require a refresh of the browser.
 
 ## What's Not Supported
 
