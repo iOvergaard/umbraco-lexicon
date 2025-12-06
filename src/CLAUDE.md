@@ -1,28 +1,49 @@
-# Lexicon - Umbraco Package
+# Lexicon - Source Directory
 
-## Project Overview
+## Quick Reference
 
-**Lexicon** is an Umbraco community package that restores dictionary-based backoffice localization for Umbraco 14 and newer versions.
+### Build & Test
 
-## Background
+```bash
+dotnet build Lexicon.sln
+dotnet test Lexicon.sln
+```
 
-- Dictionary-based backoffice localization was a built-in feature in Umbraco 13 and earlier
-- This functionality was removed in Umbraco 14+
-- **Lexicon** reintroduces this capability for users who need it on modern versions
+### Project Structure
 
-## Package Purpose
+- `Lexicon/` - Main package (backend-only, no client code)
+- `Lexicon.UnitTest/` - xUnit tests with Moq
 
-Enable developers and content editors to localize the Umbraco backoffice using dictionary items, providing flexibility for multi-language content management environments.
+### Key Files
 
-## Naming
+| File | Purpose |
+|------|---------|
+| `Lexicon/Package/UmbracoPackage.cs` | IComposer - registers LexiconPackageManifestReader |
+| `Lexicon/Package/LexiconPackageManifestReader.cs` | IPackageManifestReader - builds package manifest with localizations |
+| `Lexicon/Package/LocalizationBuilder.cs` | Static class - transforms dictionary items to nested localization format |
 
-- **Package name:** Lexicon
-- **Rationale:** Clean, memorable, directly communicates dictionary/language management focus. Fits well within Umbraco marketplace naming conventions (alongside packages like Skybrud Redirects, Page Guard, uSync.Complete)
-- **NuGet namespace:** `umbraco.community.lexicon` (or similar following Umbraco community conventions)
+### How Dictionary Keys Are Processed
 
-## Key Design Considerations
+```
+Input:  Article_Title (with translation "Article Title" for en-US)
+Output: { "type": "localization", "meta": { "culture": "en-US", "localizations": { "Article": { "Title": "Article Title" } } } }
+```
 
-- Compatibility with Umbraco 14+
-- Dictionary item integration
-- Backoffice UI localization
-- Developer-friendly API
+The `SplitKey` method uses the first `_` or `.` as separator:
+- `Article_Title` → Area: "Article", Key: "Title"
+- `Form.Submit` → Area: "Form", Key: "Submit"
+
+### Usage in Umbraco
+
+- **Labels**: `#Area_Key` (property labels, tab names, group names)
+- **Descriptions**: `{#Area_Key}` (UFM syntax)
+
+### Testing
+
+Tests cover:
+- `SplitKey` with valid/invalid keys
+- `BuildLocalizationExtensions` output structure
+- Multi-language support
+- Edge cases (empty translations, special characters)
+
+Run tests: `dotnet test Lexicon.UnitTest/Lexicon.UnitTest.csproj`
