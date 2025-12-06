@@ -13,29 +13,21 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v5
+        uses: actions/checkout@v4
 
       - name: Setup .NET
-        uses: actions/setup-dotnet@v2
+        uses: actions/setup-dotnet@v4
         with:
           dotnet-version: 10.x
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 22.x
-          cache: npm
+      - name: Restore dependencies
+        run: dotnet restore src/Lexicon.sln
 
-      - name: Install dependencies
-        run: npm install
-        working-directory: src/Lexicon/Client
+      - name: Test
+        run: dotnet test src/Lexicon.sln -c Release --verbosity normal
 
-      - name: Build client project
-        run: npm run build
-        working-directory: src/Lexicon/Client
-
-      - name: Build & Pack server project
-        run: dotnet pack src/Lexicon/Lexicon.csproj -c Release /p:Version=${{github.ref_name}}
+      - name: Pack
+        run: dotnet pack src/Lexicon/Lexicon.csproj -c Release --no-restore /p:Version=${{github.ref_name}}
 
       - name: Push to NuGet
         run: dotnet nuget push **/*.nupkg -k ${{secrets.NUGET_API_KEY}} -s https://api.nuget.org/v3/index.json

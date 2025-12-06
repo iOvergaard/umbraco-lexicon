@@ -14,26 +14,18 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v5
+        uses: actions/checkout@v4
 
       - name: Setup .NET
-        uses: actions/setup-dotnet@v2
+        uses: actions/setup-dotnet@v4
         with:
           dotnet-version: 10.x
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 22.x
-          cache: npm
+      - name: Restore dependencies
+        run: dotnet restore src/Lexicon.sln
 
-      - name: Install dependencies
-        run: npm install
-        working-directory: src/Lexicon/Client
+      - name: Build
+        run: dotnet build src/Lexicon.sln -c Release --no-restore
 
-      - name: Build client project
-        run: npm run build
-        working-directory: src/Lexicon/Client
-
-      - name: Build server project
-        run: dotnet build src/Lexicon/Lexicon.csproj -c Release
+      - name: Test
+        run: dotnet test src/Lexicon.sln -c Release --no-build --verbosity normal
