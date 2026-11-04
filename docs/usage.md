@@ -77,6 +77,16 @@ This is [Umbraco Flavoured Markdown](https://docs.umbraco.com/umbraco-cms/refere
 | Group names | `#Area_Key` |
 | Property descriptions | `{#Area_Key}` |
 
+### Keys With Dots
+
+Labels only pick up letters, digits and underscores after the `#`, so a dot ends the reference. Lexicon therefore also registers every key that has dots after the area with those dots replaced by underscores. Use the underscore form in labels:
+
+| Dictionary Key | Label | Description |
+|----------------|-------|-------------|
+| `DocumentType.Field.Name` | `#DocumentType_Field_Name` | `{#DocumentType_Field.Name}` or `{#DocumentType_Field_Name}` |
+
+If another dictionary item already uses the underscore form (for example `DocumentType_Field_Name`), that item's value is used.
+
 ### Example
 
 1. Create a dictionary item with key `Article_Title` and value "Article Title"
