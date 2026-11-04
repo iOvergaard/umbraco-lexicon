@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-**Lexicon** is an Umbraco community package that restores dictionary-based backoffice localization for Umbraco 14+. It converts dictionary items into Umbraco's localization extension format at startup.
+**Lexicon** is an Umbraco community package that restores dictionary-based backoffice localization for Umbraco 17+. It converts dictionary items into Umbraco's localization extension format at startup.
 
 ## How It Works
 

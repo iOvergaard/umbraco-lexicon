@@ -4,7 +4,7 @@
   <img src="images/logo.svg" alt="Lexicon Logo" width="128" height="128">
 </p>
 
-Lexicon enables dictionary-based Umbraco BackOffice localization in Umbraco 14+.
+Lexicon enables dictionary-based Umbraco BackOffice localization in Umbraco 17+.
 
 ## Requirements
 

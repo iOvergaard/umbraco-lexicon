@@ -8,7 +8,7 @@
 [![NuGet](https://img.shields.io/nuget/vpre/Umbraco.Community.Lexicon?color=0273B3)](https://www.nuget.org/packages/Umbraco.Community.Lexicon)
 [![GitHub license](https://img.shields.io/github/license/iOvergaard/umbraco-lexicon?color=8AB803)](../LICENSE)
 
-Use dictionary items to localize the Umbraco Backoffice in Umbraco 14+.
+Use dictionary items to localize the Umbraco Backoffice in Umbraco 17+.
 
 ## What is it?
 
@@ -18,7 +18,7 @@ Dictionary-based backoffice localization was a built-in feature in Umbraco 13 an
 
 ## Installation
 
-Add the package to an existing Umbraco website (v14+) from NuGet:
+Add the package to an existing Umbraco website (v17+) from NuGet:
 
 ```bash
 dotnet add package Umbraco.Community.Lexicon

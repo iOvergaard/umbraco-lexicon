@@ -1,6 +1,6 @@
 # Migration from Umbraco 13
 
-This guide covers the key differences between dictionary-based localization in Umbraco 13 and Lexicon in Umbraco 14+.
+This guide covers the key differences between dictionary-based localization in Umbraco 13 and Lexicon in Umbraco 17+.
 
 ## Syntax Changes
 
@@ -8,7 +8,7 @@ Lexicon uses Umbraco's built-in [UI Localization](https://docs.umbraco.com/umbra
 
 ### Reference Syntax
 
-| Field Type | Umbraco 13 | Lexicon (Umbraco 14+) |
+| Field Type | Umbraco 13 | Lexicon (Umbraco 17+) |
 |------------|------------|----------------------|
 | Labels | `#MyKey` | `#Area_Key` |
 | Descriptions | `#MyKey` | `{#Area_Key}` |
