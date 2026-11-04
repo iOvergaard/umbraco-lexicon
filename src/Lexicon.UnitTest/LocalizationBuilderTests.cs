@@ -83,6 +83,45 @@ public class LocalizationBuilderTests
     }
 
     [Fact]
+    public void BuildLocalizationExtensions_WithDotsInKey_AlsoRegistersUnderscoreKey()
+    {
+        // Arrange
+        var items = new List<IDictionaryItem>
+        {
+            CreateDictionaryItem("DocumentType.Field.Name", new[] { ("en-US", "Name") })
+        };
+
+        // Act
+        var result = LocalizationBuilder.BuildLocalizationExtensions(items);
+
+        // Assert
+        var localizations = (Dictionary<string, Dictionary<string, string>>)((Dictionary<string, object>)result[0]["meta"])["localizations"];
+
+        Assert.Equal("Name", localizations["DocumentType"]["Field.Name"]);
+        Assert.Equal("Name", localizations["DocumentType"]["Field_Name"]);
+    }
+
+    [Fact]
+    public void BuildLocalizationExtensions_WithDotsInKey_KeepsExistingUnderscoreKey()
+    {
+        // Arrange
+        var items = new List<IDictionaryItem>
+        {
+            CreateDictionaryItem("DocumentType_Button_Color", new[] { ("en-US", "Primary with underscores") }),
+            CreateDictionaryItem("DocumentType.Button.Color", new[] { ("en-US", "Primary") })
+        };
+
+        // Act
+        var result = LocalizationBuilder.BuildLocalizationExtensions(items);
+
+        // Assert
+        var localizations = (Dictionary<string, Dictionary<string, string>>)((Dictionary<string, object>)result[0]["meta"])["localizations"];
+
+        Assert.Equal("Primary with underscores", localizations["DocumentType"]["Button_Color"]);
+        Assert.Equal("Primary", localizations["DocumentType"]["Button.Color"]);
+    }
+
+    [Fact]
     public void BuildLocalizationExtensions_FiltersOutInvalidKeys()
     {
         // Arrange

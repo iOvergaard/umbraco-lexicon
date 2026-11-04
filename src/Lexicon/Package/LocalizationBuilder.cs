@@ -43,6 +43,15 @@ public static class LocalizationBuilder
             }
         }
 
+        // Labels only match #\w+, so also register dotted keys with underscores; a real key of the same name wins
+        foreach (var keys in byCulture.Values.SelectMany(areas => areas.Values))
+        {
+            foreach (var (key, value) in keys.Where(k => k.Key.Contains('.')).ToList())
+            {
+                keys.TryAdd(key.Replace('.', '_'), value);
+            }
+        }
+
         // Create localization extension per culture with nested structure
         return byCulture.Select(kvp => new Dictionary<string, object>
         {
