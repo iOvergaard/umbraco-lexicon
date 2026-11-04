@@ -1,7 +1,7 @@
 # Lexicon Documentation
 
 <p align="center">
-  <img src="images/logo.svg" alt="Lexicon Logo" width="128" height="128">
+  <img src="https://raw.githubusercontent.com/iOvergaard/umbraco-lexicon/main/docs/images/logo.png" alt="Lexicon Logo" width="128" height="128">
 </p>
 
 Lexicon enables dictionary-based Umbraco BackOffice localization in Umbraco 14+.
@@ -41,6 +41,6 @@ Dictionary items with keys containing `_` or `.` are converted into a nested loc
 
 ## Documentation
 
-- [Usage Guide](usage.md) - How to use dictionary-based localization
-- [Migration from Umbraco 13](migration.md) - Key differences and migration steps
-- [Technical Details](technical.md) - Implementation details and approaches tried
+- [Usage Guide](https://github.com/iOvergaard/umbraco-lexicon/blob/main/docs/usage.md) - How to use dictionary-based localization
+- [Migration from Umbraco 13](https://github.com/iOvergaard/umbraco-lexicon/blob/main/docs/migration.md) - Key differences and migration steps
+- [Technical Details](https://github.com/iOvergaard/umbraco-lexicon/blob/main/docs/technical.md) - Implementation details and approaches tried
