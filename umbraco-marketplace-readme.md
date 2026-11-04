@@ -1,6 +1,6 @@
 # Lexicon for Umbraco
 
-Use dictionary items to localize the Umbraco Backoffice in Umbraco 14+.
+Use dictionary items to localize the Umbraco Backoffice in Umbraco 17+.
 
 ## What is it?
 
